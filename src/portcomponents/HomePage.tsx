@@ -107,12 +107,22 @@
 // export default HomePage;
 
 import Navbar from "./Navbar";
+import { useState } from "react";
 
 const HomePage = () => {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+    document.documentElement.classList.toggle("dark");
+  };
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-10 mt-16">
-      <Navbar />
-      <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white">Welcome to My Portfolio</h1>
+      <Navbar toggleTheme={toggleTheme} theme={theme} />
+      <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white">
+        Welcome to My Portfolio
+      </h1>
       <p className="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-2xl text-center">
         Showcasing Full-Stack Projects, Unreal Engine Work, Blender 3D Models, and Writing.
       </p>
@@ -121,3 +131,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
