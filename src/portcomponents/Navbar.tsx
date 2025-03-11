@@ -62,10 +62,11 @@ const Navbar: FC<NavbarProps> = ({ toggleTheme, theme }) => {
   return (
     <nav>
       <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
+      <Link to="/projects">Projects</Link>
       <Link to="/unrealengine">UnrealEngine</Link>
-      <Link to="/writing">Writing</Link>
       <Link to="/blender">Blender</Link>
+      <Link to="/writing">Writing</Link>
+      <Link to="/about">About</Link>
 
       {/* Light/Dark Mode Toggle Button */}
       <button className="theme-toggle" onClick={toggleTheme}>
