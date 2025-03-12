@@ -1,3 +1,5 @@
+import blenderSword from '../assets/blender-sword-01.png';
+
 const Blender = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-10 mt-10 bg-gray-50 dark:bg-gray-900">
@@ -10,7 +12,7 @@ const Blender = () => {
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform hover:scale-105">
           <div className="relative w-full h-64">
             <img
-              src="src/assets/blender-sword-01.png"
+              src={blenderSword}
               alt="3D Sword Model"
               className="w-full h-full object-cover"
             />
